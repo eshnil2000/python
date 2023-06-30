@@ -174,3 +174,29 @@ VALUES
     (23, 'D003'),
     (24, 'D004');
 
+INSERT INTO titles (emp_no, title_name)
+VALUES
+    (1, 'HR'),
+    (2, 'Admin'),
+    (3, 'IT'),
+    (4, 'developer'),
+    (5, 'HR'),
+    (6, 'Admin'),
+    (7, 'IT'),
+    (8, 'developer'),
+    (9, 'HR'),
+    (10, 'Admin'),
+    (11, 'IT'),
+    (12, 'developer'),
+    (13, 'HR'),
+    (14, 'Admin'),
+    (15, 'IT'),
+    (16, 'developer'),
+    (17, 'HR'),
+    (18, 'Admin'),
+    (19, 'IT'),
+    (20, 'developer'),
+    (21, 'HR'),
+    (22, 'Admin'),
+    (23, 'IT'),
+    (24, 'developer');

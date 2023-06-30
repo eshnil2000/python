@@ -109,7 +109,14 @@ WHERE de.to_date = '9999-01-01' -- Assuming '9999-01-01' represents the current 
 GROUP BY d.dept_name
 ORDER BY total_salary DESC;
 
-
+CREATE TABLE dept_emp (
+    emp_no INT NOT NULL,
+    dept_no CHAR(4) NOT NULL
+);
+CREATE TABLE salaries (
+    emp_no INT NOT NULL,
+    salary DECIMAL(10,2) NOT NULL
+);
 
 INSERT INTO salaries (emp_no, salary)
 VALUES
@@ -138,14 +145,7 @@ VALUES
     (23, 60000),
     (24, 62000);
 
-CREATE TABLE dept_emp (
-    emp_no INT NOT NULL,
-    dept_no CHAR(4) NOT NULL
-);
-CREATE TABLE salaries (
-    emp_no INT NOT NULL,
-    salary DECIMAL(10,2) NOT NULL
-);
+
 
 INSERT INTO dept_emp (emp_no, dept_no)
 VALUES

@@ -82,3 +82,22 @@ VALUES
     (6, 'D004', '2018-09-01', '2023-08-31'),
     (12, 'D005', '1992-03-01', '2023-12-31'),
     (14, 'D001', '2021-01-01', '2023-12-31');
+
+CREATE TABLE if not exists title (
+  title_id INT PRIMARY KEY,
+  title_name VARCHAR(255)
+);
+
+INSERT INTO title (title_id, title_name)
+VALUES
+  (1, 'Title 1'),
+  (2, 'Title 2'),
+  (3, 'Title 3'),
+  (4, 'Title 4'),
+  (5, 'Title 5'),
+  (6, 'Title 6'),
+  (7, 'Title 7'),
+  (8, 'Title 8'),
+  (9, 'Title 9'),
+  (10, 'Title 10');
+

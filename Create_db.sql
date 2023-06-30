@@ -200,3 +200,20 @@ VALUES
     (22, 'Admin'),
     (23, 'IT'),
     (24, 'developer');
+
+
+SELECT e.first_name, e.last_name
+FROM employees e
+JOIN dept_manager dm ON e.emp_no = dm.emp_no
+GROUP BY dm.emp_no
+HAVING COUNT(*) = (
+    SELECT MAX(emp_count)
+    FROM (
+        SELECT COUNT(*) AS emp_count
+        FROM dept_manager
+        GROUP BY emp_no
+    ) AS counts
+);
+
+
+

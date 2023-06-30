@@ -101,3 +101,11 @@ VALUES
   (9, 'Title 9'),
   (10, 'Title 10');
 
+SELECT d.dept_name, COUNT(de.emp_no) AS num_employees, SUM(s.salary) AS total_salary
+FROM departments d
+JOIN dept_emp de ON d.dept_no = de.dept_no
+JOIN salaries s ON de.emp_no = s.emp_no
+WHERE de.to_date = '9999-01-01' -- Assuming '9999-01-01' represents the current date in the database
+GROUP BY d.dept_name
+ORDER BY total_salary DESC;
+
